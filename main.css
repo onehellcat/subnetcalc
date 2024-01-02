@@ -2,6 +2,7 @@ html{
     color: white;
     font-size: 1.2rem;
     background-color: #23272A;
+    user-select: none;
 }
 :disabled{
 color: black;
