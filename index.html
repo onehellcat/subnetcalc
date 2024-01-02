@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="math.js"></script>
+</head>
+<body onload="calculateClass('A');">
+    <form name="SCForm" action="#" id="SCForm">
+<div class="parent">
+    <div class="div1">Class</div>
+    <div class="div2">Network IP</div>
+    <div class="div3">Subnet Mask</div>
+    <div class="div4">Wildcard Mask</div>
+    <div class="div5">Mask Bits</div>
+    <div class="div6">Hosts</div>
+    <div class="div7">Subnet ID</div>
+    <div class="div8">Start</div>
+    <div class="div9">End</div>
+    <div class="div10">Broadcast</div>
+    <div class="div11">
+        A<input type="radio" name="class" value="A" checked="true" onclick="calculateClass('A');" />
+        B<input type="radio" name="class" value="B" onclick="calculateClass('B');" />
+        C<input type="radio" name="class" value="C" onclick="calculateClass('C');" />
+    </div>
+    <div class="div12">
+        <input id="network" type="text" onchange="calculateIPCIDR(this.value);" class="inputHeight"/>
+    </div>
+    <div class="div13">
+        <input id="mask" type="text" onchange="calculateSubnet(this.value);" disabled class="inputHeight"/>
+        <select id="maskSelect" onchange="calculateSubnet(this.options[this.selectedIndex].value);" class="inputHeight"><option value="255.0.0.0">loading...</select>
+
+   
+    </div>
+    <div class="div14">
+        <input id="wildcard" type="text" readonly="readonly" disabled class="inputHeight"/>
+    </div>
+    <div class="div15">
+        <input id="maskbits" type="text" readonly="readonly" disabled class="inputHeight"/>
+    </div>
+    <div class="div16">
+        <input id="hosts" type="text" readonly="readonly" disabled class="inputHeight"/>
+        <select id="hostsSelect" onchange="calculateHosts(this.options[this.selectedIndex].value);" class="inputHeight"><option value="2">loading...</select>
+    </div>
+    <div class="div17">
+        <input id="subnetID" type="text" readonly="readonly" disabled/ class="inputHeight">
+    </div>
+    <div class="div18">
+        <input id="startIP" type="text" readonly="readonly" disabled/ class="inputHeight">
+    </div>
+    <div class="div19">
+        <input id="endIP" type="text" readonly="readonly" disabled/ class="inputHeight">
+    </div>
+    <div class="div20">
+        <input id="broadcast" type="text" readonly="readonly" disabled/ class="inputHeight">
+    </div>
+    </div>
+
+
+
+</form>
+</body>
+</html>
